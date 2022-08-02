@@ -1,0 +1,21 @@
+#navigation_bar{
+    background-color: rgb(245, 242, 231);
+    max-width: 900; 
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#center_bar{
+    background-color: rgb(245, 242, 231);
+    max-width: 900; 
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+#background{
+    background-image: url("tilecomposite.png");
+}
