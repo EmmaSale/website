@@ -8,6 +8,40 @@ canvas.width = 900
 canvas.height = (shelves*shelf_height)+(separator_height*(shelves-1))
 
 var c = canvas.getContext('2d')
+var books = [
+    [
+        {
+            "link": "0000-website",
+            "hue": 40
+        },
+        {
+            "link": "0000-website",
+            "hue": 70
+        },
+    ],
+    [
+        {
+            "link": "0000-website",
+            "hue": 60
+        },
+    ]
+]
+
+function load_books() {
+    for (var s = 0; s < books.length; s++) {
+        var shelf = books[s]
+        for (var b = 0; b < shelf.length; b++) {
+            var book = shelf[b]
+            var link = document.createElement("a")
+            canvas.appendChild(link)
+            link.href = "projects/"+book["link"]+".html"
+            var img = document.createElement("img")
+            link.appendChild(img)
+            img.alt = "link to " + book["link"]
+            img.src = "book.png"
+        }
+    }
+}
 
 var tick = 0
 function animate() {
@@ -36,3 +70,4 @@ function animate() {
     requestAnimationFrame(animate)
 }
 animate()
+load_books()
