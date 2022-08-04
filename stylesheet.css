@@ -27,6 +27,18 @@
     background-image: url("tilecomposite.png");
 }
 
+#book_background{
+    background-image: url("woodcomposite.png");
+}
+
+.d-block{
+    display:block;
+}
+
+.d-flex{
+    display:flex;
+}
+
 a:link {
     color: rgb(55, 203, 211);
 }
@@ -37,5 +49,5 @@ a:hover {
     color: rgb(224, 130, 130);
 }
 a:active {
-    color: rgb(55, 203, 211);
+    color: rgb(255, 255, 255);
 }
