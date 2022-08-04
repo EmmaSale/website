@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas')
 
-var shelves = 7
+var shelves = 40
 var shelf_height = 150
 var separator_height = 10
 
