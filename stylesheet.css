@@ -26,10 +26,19 @@
 #background{
     background-image: url("tilecomposite.png");
 }
-
 #book_background{
     background-image: url("woodcomposite.png");
 }
+
+#book_shelf{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#book_container{
+    position:relative
+}
+
 
 .d-block{
     display:block;

@@ -12,7 +12,19 @@ var books = [
     [
         {
             "link": "0000-website",
-            "hue": 40
+            "hue": 180
+        },
+        {
+            "link": "0001-comp_camp_game",
+            "hue": 230
+        },
+        {
+            "link": "0000-website",
+            "hue": 70
+        },
+        {
+            "link": "0000-website",
+            "hue": 65
         },
         {
             "link": "0000-website",
@@ -24,21 +36,46 @@ var books = [
             "link": "0000-website",
             "hue": 60
         },
+        {
+            "link": "0000-website",
+            "hue": 55
+        },
+        {
+            "link": "0000-website",
+            "hue": 70
+        },
+    ],
+    [
+        {
+            "link": "0000-website",
+            "hue": 55
+        },
+        {
+            "link": "0000-website",
+            "hue": 70
+        },
+        {
+            "link": "0000-website",
+            "hue": 60
+        },
     ]
 ]
 
 function load_books() {
+    var bookshelf = document.querySelector('#book_shelf')
     for (var s = 0; s < books.length; s++) {
         var shelf = books[s]
         for (var b = 0; b < shelf.length; b++) {
             var book = shelf[b]
             var link = document.createElement("a")
-            canvas.appendChild(link)
+            bookshelf.appendChild(link)
             link.href = "projects/"+book["link"]+".html"
             var img = document.createElement("img")
             link.appendChild(img)
             img.alt = "link to " + book["link"]
             img.src = "book.png"
+            link.style = "position: absolute; top: "+s*160+"px; left: "+b*35+"px"
+            img.style = "filter: hue-rotate("+book["hue"]+"deg);"
         }
     }
 }
