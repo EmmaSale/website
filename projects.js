@@ -26,14 +26,19 @@ var books = [
             "hue": 70
         },
         {
-            "link": "0000-website",
-            "emblem": "blank",
-            "hue": 65
+            "link": "0002-very_intentional_bugs",
+            "emblem": "game_jam",
+            "hue": -20
         },
         {
-            "link": "0000-website",
-            "emblem": "blank",
-            "hue": 70
+            "link": "0003-crab_isle",
+            "emblem": "game_jam",
+            "hue": 20
+        },
+        {
+            "link": "0005-website",
+            "emblem": "game_jam",
+            "hue": 5
         },
     ],
     [
