@@ -12,50 +12,61 @@ var books = [
     [
         {
             "link": "0000-website",
-            "hue": 180
+            "hue": 250,
+            "emblem": "comp_camp"
         },
         {
             "link": "0001-comp_camp_game",
+            "emblem": "comp_camp",
             "hue": 230
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 70
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 65
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 70
         },
     ],
     [
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 60
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 55
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 70
         },
     ],
     [
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 55
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 70
         },
         {
             "link": "0000-website",
+            "emblem": "blank",
             "hue": 60
         },
     ]
@@ -68,14 +79,21 @@ function load_books() {
         for (var b = 0; b < shelf.length; b++) {
             var book = shelf[b]
             var link = document.createElement("a")
-            bookshelf.appendChild(link)
             link.href = "projects/"+book["link"]+".html"
-            var img = document.createElement("img")
-            link.appendChild(img)
-            img.alt = "link to " + book["link"]
-            img.src = "book.png"
-            link.style = "position: absolute; top: "+s*160+"px; left: "+b*35+"px"
-            img.style = "filter: hue-rotate("+book["hue"]+"deg);"
+            link.style = "position:absolute; top: "+s*160+"px; left: "+b*35+"px"
+            bookshelf.appendChild(link)
+
+            var spine = document.createElement("img")
+            spine.alt = "link to " + book["link"]
+            spine.src = "book.png"
+            spine.classList.add('book');
+            spine.style = "filter: hue-rotate("+book["hue"]+"deg);"
+            link.appendChild(spine)
+
+            var emblem = document.createElement("img")
+            emblem.src = "book_emblems/"+book["emblem"]+".png"
+            emblem.classList.add('book');
+            link.appendChild(emblem)
         }
     }
 }

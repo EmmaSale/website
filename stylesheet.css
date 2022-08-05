@@ -38,7 +38,13 @@
 #book_container{
     position:relative
 }
-
+.book{
+    max-height: 150;
+    max-width: 35;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
 
 .d-block{
     display:block;
